@@ -6,14 +6,160 @@
     <title>Завдання 4</title>
 </head>
 <body>
-
-    <div align="center">
+    <center>
         <p>
             <a href="../index.html">Повернутись на головну</a>
         </p>
 
         <h1>Завдання 4: анкета</h1>
-    </div>
+
+            <div align="left" width="700">
+
+                <form action="" method="get">
+
+                    <fieldset>
+                        <legend><b>Облікові та персональні дані</b></legend>
+                        <br>
+
+                        <label for="username">Повне ім'я (ПІБ):</label><br>
+                        <input type="text" id="username" name="full_name" placeholder="Введіть ваше ПІБ" required tabindex="1">
+                        <br><br>
+
+                        <label for="user_email">Електронна пошта:</label><br>
+                        <input type="email" id="user_email" name="email" placeholder="example@mail.com" autocomplete="off"
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required tabindex="2">
+                        <br><br>
+
+                        <label for="user_password">Пароль (6 символів):</label><br>
+                        <input type="password" id="user_password" name="password" placeholder="Пароль"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6}" maxlength="6" required tabindex="3">
+                        <br><br>
+
+                        <label for="user_tel">Номер телефону:</label><br>
+                        <input type="tel" id="user_tel" name="phone" placeholder="+380XXXXXXXXX"
+                               pattern="^\+380\d{9}$" required tabindex="4">
+                        <br><br>
+
+                        <label for="birth_date">Дата народження:</label><br>
+                        <input type="date" id="birth_date" name="birth_date" required tabindex="5">
+                        <br><br>
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend><b>Опитування та вподобання</b></legend>
+                        <br>
+
+                        <p><b>Рівень освіти:</b></p>
+                        <label><input type="radio" name="education" value="school" tabindex="6"> Середня освіта</label><br>
+                        <label><input type="radio" name="education" value="bachelor" tabindex="7"> Бакалаврат</label><br>
+                        <label><input type="radio" name="education" value="master" tabindex="8"> Магістратура</label>
+                        <br><br>
+
+                        <p><b>Формат навчання:</b></p>
+                        <label><input type="radio" name="study_format" value="offline" tabindex="9"> Очний</label><br>
+                        <label><input type="radio" name="study_format" value="online" tabindex="10"> Дистанційний</label><br>
+                        <label><input type="radio" name="study_format" value="mixed" checked tabindex="11"> Змішаний (за замовчуванням)</label>
+                        <br><br>
+
+                        <p><b>Технології, якими ви володієте:</b></p>
+                        <label><input type="checkbox" name="tech_html" value="html" tabindex="12"> HTML5 & CSS3</label><br>
+                        <label><input type="checkbox" name="tech_js" value="javascript" tabindex="13"> JavaScript</label><br>
+                        <label><input type="checkbox" name="tech_cpp" value="cpp" tabindex="14"> C++</label><br>
+                        <label><input type="checkbox" name="tech_sql" value="sql" tabindex="15"> Бази даних (SQL)</label>
+                        <br><br>
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend><b>Вибір параметрів</b></legend>
+                        <br>
+
+                        <label for="select_city">Оберіть основне місто проживання:</label><br>
+                        <select id="select_city" name="city" tabindex="16">
+                            <option value="kyiv">Київ</option>
+                            <option value="lviv">Львів</option>
+                            <option value="chernivtsi" selected>Чернівці (за замовчуванням)</option>
+                            <option value="odessa">Одеса</option>
+                            <option value="kharkiv">Харків</option>
+                        </select>
+                        <br><br>
+
+                        <label for="academic_disciplines">Дисципліна:</label><br>
+                        <select id="academic_disciplines" name="discipline" tabindex="18">
+                            <optgroup label="Математичні дисципліни">
+                                <option value="math_anal">Математичний аналіз</option>
+                                <option value="lin_alg">Лінійна алгебра</option>
+                                <option value="discrete_math">Дискретна математика</option>
+                            </optgroup>
+                            <optgroup label="Програмування">
+                                <option value="basics_prog">Основи програмування</option>
+                                <option value="oop">Об'єктно-орієнтоване програмування</option>
+                                <option value="algo">Алгоритми та структури даних</option>
+                            </optgroup>
+                            <optgroup label="Комп'ютерні системи">
+                                <option value="arch">Архітектура комп'ютерів</option>
+                                <option value="os">Операційні системи</option>
+                                <option value="networks">Комп'ютерні мережі</option>
+                            </optgroup>
+                            <optgroup label="Веб-розробка">
+                                <option value="frontend">Основи Frontend (HTML/CSS)</option>
+                                <option value="backend">Серверна веб-розробка (Node.js)</option>
+                                <option value="databases">Сучасні веб-фреймворки (React/Vue)</option>
+                            </optgroup>
+                        </select>
+                        <br><br>
+
+                        <label for="ide_choice">Улюблене середовище розробки:</label><br>
+                        <input list="ide_list" id="ide_choice" name="ide" placeholder="Почніть вводити назву..." tabindex="19">
+                        <datalist id="ide_list">
+                            <option value="Visual Studio Code">
+                            <option value="Visual Studio">
+                            <option value="CLion">
+                            <option value="IntelliJ IDEA">
+                            <option value="PyCharm">
+                        </datalist>
+                        <br><br>
+
+                        <label for="select_languages">Вибір мови програмування для вивчення:</label><br>
+                        <select id="select_languages" name="languages" multiple size="4" tabindex="17">
+                            <option value="python">Python</option>
+                            <option value="cpp">C++</option>
+                            <option value="csharp">C#</option>
+                            <option value="java">Java</option>
+                            <option value="typescript">TypeScript</option>
+                            <option value="rust">Rust</option>
+                        </select>
+                        <br><br>
+
+                    </fieldset>
+                    <br>
+
+                    <fieldset>
+                        <legend><b>Додаткові матеріали та коментарі</b></legend>
+                        <br>
+
+                        <label for="audio_files">Завантажте аудіофайли:</label><br>
+                        <input type="file" id="audio_files" name="audio_recordings" accept="audio/*" multiple tabindex="20">
+                        <br><br>
+
+                        <label for="user_about">Додаткові коментарі:</label><br>
+                        <textarea id="user_about" name="about" rows="4" cols="50" placeholder="Введіть коротку інформацію про себе..." tabindex="21"></textarea>
+                        <br><br>
+                    </fieldset>
+                    <br>
+
+                    <div align="center">
+                        <input type="submit" value="Відправити анкету" tabindex="22">
+                        &nbsp;&nbsp;
+                        <input type="reset" value="Очистити форму" tabindex="23">
+                    </div>
+
+                </form>
+                <br>
+
+            </div>
+    </center>
 
 </body>
 </html>
