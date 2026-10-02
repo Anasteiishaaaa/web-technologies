@@ -1,45 +1,45 @@
 ﻿body
 
 /* Завдання 1 */
-* {
-    font-family: Arial, sant-serif;
+.task1 {
+    font-family: Arial, sans-serif;
     font-size: 20px;
     line-height: 40px;
 }
 
-p {
+.task1 p {
     color: green;
     text-align: center;
 }
 
-div {
+.task1 div {
     text-align: justify;
 }
 
-.red-text {
+.task1 .red-text {
     color: red;
 }
 
-.nowrap {
+.task1 .nowrap {
     white-space: nowrap;
 }
 
-#unique-p {
+.task1 #unique-p {
     font-style: italic;
     font-weight: bold;
 }
 
-.shadow {
+.task1 .shadow {
     text-shadow: 5px -5px 3px blue;
 }
 
-.custom-div1 {
+.task1 .custom-div1 {
     text-decoration: line-through;
     text-transform: uppercase;
     text-indent: 50px;
 }
 
-.custom-div2 {
+.task1 .custom-div2 {
     letter-spacing: 30px;
     word-spacing: 50px;
 }
@@ -133,4 +133,55 @@ ul li ul {
 
 .ol {
     list-style-position: inside;
+}
+
+
+/* Завдання 4 */
+.text-background span {
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+div .text-background span {
+    background-color: yellow;
+}
+
+span span {
+    background-color: gray;
+    text-decoration: line-through;
+}
+
+ol span span {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+section > p {
+    text-shadow: 3px 3px 5px rgb(135, 118, 198);
+    text-indent: 50px;
+}
+
+li > ul {
+    list-style-image: url('img/li.svg');
+}
+
+div > .text-background {
+    word-spacing: 50px;
+}
+
+.text-bold > p {
+    font-weight: bold;
+}
+
+.text-bold > section > p {
+    line-height: 45px;
+}
+
+img + p {
+    background-color: brown;
+}
+
+section ~ p {
+    color: red;
 }
