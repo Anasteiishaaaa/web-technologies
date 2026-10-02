@@ -104,3 +104,33 @@ div {
     line-height: 1.6;
     color: #2e3d30;
 }
+
+
+/* Завдання 3 */
+a {
+    color: purple;
+}
+
+.menu-item {
+    color: green;
+}
+
+.berries-list {
+    list-style-type: square;
+}
+
+.vegetables-list {
+    list-style-image: url('img/marker.png');
+}
+
+ul li ul {
+    list-style-type: none;
+}
+
+.berries-list a {
+    text-decoration: none;
+}
+
+.ol {
+    list-style-position: inside;
+}
