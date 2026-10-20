@@ -1,0 +1,117 @@
+body {
+    background-color: #F9F5FF;
+    color: #0E0026;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+    body > p {
+        text-align: center;
+    }
+
+a {
+    color: #0E0026;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #0E0026;
+}
+
+form {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    background-color: #F9F5FF;
+    text-align: left;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    padding: 10px 20px 20px;
+    border: 2px solid #2F0076;
+    background-color: #EEE3FF;
+}
+
+legend {
+    padding: 4px 12px;
+    font-size: 18px;
+    font-style: italic;
+    color: #F9F5FF;
+    background-color: #4200A5;
+}
+
+label {
+    letter-spacing: 0.3px;
+    line-height: 1.8;
+}
+
+p b {
+    font-size: 17px;
+    color: #0E0026;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"],
+input[type="date"], input[list], select, textarea {
+    font-family: inherit;
+    font-size: 15px;
+    color: #0E0026;
+    background-color: #F9F5FF;
+    border: 1px solid #2F0076;
+    padding: 5px 8px;
+}
+
+input[type="text"], input[type="email"], input[type="password"], input[type="tel"], input[list] {
+    width: 320px;
+    max-width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    background-color: #F9F5FF;
+    outline: 2px solid #2F0076;
+}
+
+form > div {
+    text-align: center;
+}
+
+input[type="submit"], input[type="reset"] {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 24px;
+    margin: 0 6px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #4200A5;
+    color: #F9F5FF;
+}
+
+    input[type="submit"]:hover {
+        background-color: #2F0076;
+    }
+
+input[type="reset"] {
+    background-color: #F9F5FF;
+    color: #0E0026;
+}
+
+    input[type="reset"]:hover {
+        background-color: #DCC5FF;
+    }
