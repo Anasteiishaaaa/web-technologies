@@ -1,0 +1,60 @@
+body { font-family: Arial, sans-serif; margin: 20px; }
+
+.box-sizing div {
+    display: inline-block;
+    vertical-align: top;
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #2F0076;
+    background-color: #EEE3FF;
+    margin: 20px;
+}
+.box-sizing div:nth-of-type(1) {
+    box-sizing: content-box;
+}
+.box-sizing div:nth-of-type(2) {
+    box-sizing: border-box;
+}
+
+.overflow div {
+    display: inline-block;
+    vertical-align: top;
+    width: 220px;
+    max-height: 80px;
+    border: 2px solid black;
+    margin: 0 20px 90px 0;
+}
+.overflow div:nth-of-type(1) { overflow: visible; }
+.overflow div:nth-of-type(2) { overflow: hidden; }
+.overflow div:nth-of-type(3) { overflow: scroll; }
+.overflow div:nth-of-type(4) { overflow: auto; }
+
+.menu { 
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+.menu li { display: inline-block; }
+
+.menu a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #822EFF;
+    color: white;
+    text-decoration: none;
+}
+    .menu a:hover {
+        background-color: #2F0076;
+    }
+
+/* display: none повністю прибирає елемент з потоку документа: місце під нього не
+   резервується, сусідні пункти зсуваються, елемент недоступний для скрінрідерів і
+   клавіатури. 
+   
+   Інші способи приховування:
+   - visibility: hidden – елемент невидимий, але займає місце в розмітці;
+   - opacity: 0 – елемент прозорий, займає місце і лишається клікабельним;
+   - position: absolute (з великим від'ємним left) – елемент виноситься за екран,
+     але лишається в DOM і доступний для скрінрідерів. */
+.menu li:nth-child(5) { display: none; }
