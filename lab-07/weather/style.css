@@ -1,0 +1,131 @@
+﻿*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text: #444;
+    --muted: #888;
+    --line: #ccc;
+    --font: "Roboto", Arial, sans-serif;
+    --pad: 24px;
+}
+
+body {
+    font: 300 18px/1.4 var(--font);
+    color: var(--text);
+    background: #fff;
+}
+
+.app {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 24px var(--pad);
+}
+
+h1 {
+    font-weight: 300;
+    font-size: clamp(36px, 9vw, 64px);
+    line-height: 1.1;
+}
+
+.date {
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.now {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px 40px;
+    margin: 8px 0 24px;
+}
+
+.now-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Стиль для великої картинки вгорі */
+.now-img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.temp {
+    font-size: 56px;
+}
+
+    .temp sup {
+        font-size: 18px;
+        color: var(--muted);
+    }
+
+.details {
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+    .details b {
+        font-weight: 400;
+        color: var(--text);
+    }
+
+.days {
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+.day {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+    .day > * {
+        flex: 1 1 0;
+    }
+
+.day-name {
+    font-weight: 700;
+}
+
+/* Стиль для картинок у списку днів */
+.day-img {
+    flex: 0 0 72px;
+    max-width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.hi {
+    color: var(--text);
+}
+
+.lo {
+    color: var(--muted);
+}
+
+.pollen {
+    color: var(--muted);
+}
+
+    .pollen b {
+        font-weight: 400;
+        color: var(--text);
+    }
+
+@media (max-width: 480px) {
+    .pollen {
+        display: none;
+    }
+}
