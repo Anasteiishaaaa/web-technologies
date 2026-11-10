@@ -1,0 +1,73 @@
+:root {
+    --color-block: #fdd835;
+    --color-block-text: #ffffff;
+    --color-surface: #ffffff;
+    --font-ui: "Helvetica Neue", Arial, sans-serif;
+    --container: 70rem;
+    --page-padding: 1rem;
+}
+
+body {
+    font-family: var(--font-ui);
+    background: var(--color-surface);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.page {
+    max-width: var(--container);
+    margin-inline: auto;
+    padding: var(--page-padding);
+}
+
+.tree {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-rows: repeat(12, minmax(1.6rem, 1fr));
+    gap: 0.3rem;
+    height: 85vh;
+    min-height: 30rem;
+    counter-reset: block;
+}
+
+.block {
+    padding-top: 0.15rem;
+    font-size: clamp(0.6rem, 1.4vw, 0.9rem);
+    line-height: 1.2;
+    text-align: center;
+    color: var(--color-block-text);
+    background: var(--color-block);
+}
+
+    .block::before {
+        counter-increment: block;
+        content: counter(block);
+    }
+
+    .block:nth-child(1) {
+        grid-row: span 12;
+    }
+
+    .block:nth-child(n + 2):nth-child(-n + 3) {
+        grid-row: span 6;
+    }
+
+    .block:nth-child(n + 4):nth-child(-n + 6) {
+        grid-row: span 4;
+    }
+
+    .block:nth-child(n + 7):nth-child(-n + 10) {
+        grid-row: span 3;
+    }
+
+    .block:nth-child(n + 11):nth-child(-n + 16) {
+        grid-row: span 2;
+    }
